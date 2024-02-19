@@ -1,14 +1,8 @@
 # Databricks notebook source
 import numpy as np
 import matplotlib.pyplot as plt
-
-# COMMAND ----------
-
-train_data_length = 1024
-train_data = np.zeros((train_data_length, 2))
-train_data[:, 0] = 2 * math.pi * np.random.rand(train_data_length)
-train_data[:, 1] = np.sin(train_data[:, 0])
-
-# COMMAND ----------
-
-plt.plot(train_data[:, 0], train_data[:, 1], ".")
+nb = 1024
+data = np.zeros((nb, 2))
+data[:, 0] = 2 * np.pi * np.random.rand(nb)
+data[:, 1] = np.sin(data[:, 0])
+plt.plot(data[:, 0], data[:, 1], ".")
